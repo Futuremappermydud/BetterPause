@@ -26,25 +26,22 @@ namespace BetterPause.Patches
 		[AffinityPatch(typeof(LevelBar), nameof(LevelBar.Setup), AffinityMethodType.Normal, null, typeof(IPreviewBeatmapLevel), typeof(BeatmapCharacteristicSO), typeof(BeatmapDifficulty))]
 		public void Postfix(LevelBar __instance, IPreviewBeatmapLevel previewBeatmapLevel)
 		{
-			Plugin.Log.Info("Setting up...");
+			Plugin.Log.Debug("Setting up...");
 			var transform = __instance.transform;
 
 			var bg = transform.Find("BG").GetComponent<ImageView>();
 			var cover = transform.Find("SongArtwork").GetComponent<ImageView>();
-			Plugin.Log.Info("Ye");
 
 			var buttons = transform.parent.Find("Buttons");
 			var menu = buttons.Find("BackButton").gameObject;
 			var res = buttons.Find("RestartButton").gameObject;
 			var con = buttons.Find("ContinueButton").gameObject;
-			Plugin.Log.Info("Ya");
 
 			var IForgor = buttons.parent.parent.Find("IFUIContainer");
 			if(IForgor != null)
 			{
 				IForgor = IForgor.Find("IFUIBackground");
 			}
-			Plugin.Log.Info("Yee");
 
 			Update(previewBeatmapLevel, bg, cover, menu, res, con, __instance._songNameText, __instance._authorNameText, __instance._difficultyText, __instance._characteristicIconImageView, IForgor?.GetComponent<ImageView>());
 		}
