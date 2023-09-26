@@ -1,0 +1,105 @@
+﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'
+	>
+  <vertical child-control-height='false' spacing='26' anchor-pos-y='1'>
+    <tab-select tab-tag='tabs' >
+
+    </tab-select>
+    <tab tab-name="General" tags="tabs">
+      <vertical bg="panel-top" pad="3" vertical-fit="PreferredSize" spacing="1" anchor-pos-y="2">
+        <toggle-setting value="Enabled" apply-on-change="true" text="Enabled" pref-width="50"/>
+        <toggle-setting value="MapperName" apply-on-change="true" text="Show Mapper Name" pref-width="50"/>
+      </vertical>
+    </tab>
+    <tab tab-name="Background" tags="tabs">
+      <vertical bg="panel-top" pad="2" vertical-fit="PreferredSize" spacing="1" anchor-pos-y="6.5">
+        <toggle-setting value="BgGradient" apply-on-change="true" text="Enable Backround Gradient Color" pref-width="60"/>
+        <color-setting value="BgGradient1" apply-on-change="true" text="Right Color" pref-width="60"/>
+        <color-setting value="BgGradient2" apply-on-change="true" text="Left Color" pref-width="60"/>
+        <dropdown-list-setting apply-on-change="true" text="Gradient Direction" choices="direction-options" value="BackgroundDirection" />
+      </vertical>
+    </tab>
+    <tab tab-name="Texts" tags="tabs">
+      <horizontal bg="panel-top" horizontal-fit="PreferredSize" spacing="1" pad="3" anchor-pos-y="6.5">
+        <vertical horizontal-fit="PreferredSize">
+          <toggle-setting value="SongName" apply-on-change="true" text="&lt;size=70%&gt;Enable Song Name Color" pref-width="50" font-size="1"/>
+          <color-setting value="SongNameColor" apply-on-change="true" text="&lt;size=70%&gt;Song Name Color" pref-width="55" rich-text="true"/>
+          <div size-delta-y="40" bg="round-rect-panel" bg-color="#00000000"/>
+          <toggle-setting value="AuthorName" apply-on-change="true" text="&lt;size=70%&gt;Enable Author Name Color" pref-width="50"/>
+          <color-setting value="AuthorNameColor" apply-on-change="true" text="&lt;size=70%&gt;Author Name Color" pref-width="55" rich-text="true"/>
+        </vertical>
+        <vertical>
+          <toggle-setting value="CustomMapperName" apply-on-change="true" text="&lt;size=70%&gt;Enable Mapper Name Color" pref-width="50"/>
+          <color-setting value="MapperNameColor" apply-on-change="true" text="&lt;size=70%&gt;Mapper Name Color" pref-width="55" rich-text="true"/>
+          <div size-delta-y="40" bg="round-rect-panel" bg-color="#00000000"/>
+          <toggle-setting value="CustomDiffColor" apply-on-change="true" text="&lt;size=70%&gt;Enable Difficulty Color" pref-width="50"/>
+          <color-setting value="DiffColor" apply-on-change="true" text="&lt;size=70%&gt;Difficulty Color" pref-width="55" rich-text="true"/>
+        </vertical>
+      </horizontal>
+    </tab>
+    <tab tab-name="Buttons" tags="tabs">
+      <vertical bg="panel-top" pad="3" vertical-fit="PreferredSize" spacing="1" anchor-pos-y="6">
+        <toggle-setting value="ButtonColors" apply-on-change="true" text="Enable Custom Button Colors" pref-width="60"/>
+        <horizontal>
+          <color-setting value="MenuDefault" apply-on-change="true" text="Menu Default Color" pref-width="60"/>
+          <color-setting value="MenuHover" apply-on-change="true" text="Menu Hover Color" pref-width="60"/>
+        </horizontal>
+        <horizontal>
+          <color-setting value="RestartDefault" apply-on-change="true" text="Restart Default Color" pref-width="60"/>
+          <color-setting value="RestartHover" apply-on-change="true" text="Restart Hover Color" pref-width="60"/>
+        </horizontal>
+        <horizontal>
+          <color-setting value="ContinueDefault" apply-on-change="true" text="Continue Default Color" pref-width="60"/>
+          <color-setting value="ContinueHover" apply-on-change="true" text="Continue Hover Color" pref-width="60"/>
+        </horizontal>
+      </vertical>
+    </tab>
+    <tab tab-name="IForgor 💀" tags="tabs">
+      <macro.if value="IForgorInstalled">
+        <horizontal bg="panel-top" pad="3" horizontal-fit="PreferredSize" spacing="2" anchor-pos-y="6">
+          <vertical>
+            <toggle-setting value="IForgor" apply-on-change="true" text="Enable IForgor Integration" pref-width="50"/>
+            <toggle-setting value="IForgorSync" apply-on-change="true" text="Sync Colors From Background" pref-width="50"/>
+            <toggle-setting value="IForgorFlip" apply-on-change="true" text="Flip Synced Colors" pref-width="50" />
+          </vertical>
+          <vertical>
+            <color-setting value="IForgor1" apply-on-change="true" text="Left Color" pref-width="50"/>
+            <color-setting value="IForgor2" apply-on-change="true" text="Right Color" pref-width="50"/>
+            <dropdown-list-setting apply-on-change="true" text="Gradient Direction" choices="direction-options" value="IForgorDirection" pref-width="55"/>
+          </vertical>
+        </horizontal>
+      </macro.if>
+      <macro.if value="!IForgorInstalled">
+        <vertical vertical-fit="PreferredSize" spacing="0" anchor-pos-y="6" child-align="MiddleCenter">
+          <text text="IForgor Not Installed" font-size="10" font-color="red" font-align="Center"/>
+          <text text="💀" font-size="20" font-align="Center"/>
+        </vertical>
+      </macro.if>
+    </tab>
+    <vertical horizontal-fit="Unconstrained" vertical-fit="PreferredSize" anchor-pos-y="2">
+      <horizontal id="forgor-example" bg="panel-top" size-delta-x="-75" size-delta-y="-14" horizontal-fit="Unconstrained" vertical-fit="Unconstrained" ignore-layout="true" anchor-pos-y="19">
+        <text text="💀" font-align="Center" font-color="#FFFFFF30" />
+      </horizontal>
+      <horizontal id="pause-wrapper" bg="panel-top" pref-height="14.4" size-delta-x="-60" background-color="white">
+        <horizontal ignore-layout="true" anchor-min-x="0.007" anchor-max-x="0" pref-width="80" spacing="2" child-control-width="false" child-control-height="false" child-align="MiddleLeft">
+          <img id="pause-img" size-delta-x="13" size-delta-y="13" src="BetterPause.UI.Resources.cover.png"/>
+          <vertical vertical-fit="PreferredSize" pref-width="80" spacing="-2"  child-align="MiddleLeft">
+            <text id="name-txt" text="Song Name" font-size="5" italics="true"/>
+            <text id="author-txt" rich-text="true" text="Author Name" color="#FFFFFFBF" font-size="4" italics="true"/>
+          </vertical>
+        </horizontal>
+        <horizontal ignore-layout="true" anchor-pos-x="45" horizontal-fit="PreferredSize" spacing="2" child-align="MiddleRight">
+          <horizontal horizontal-fit="PreferredSize" spacing="1" child-control-width="false" child-control-height="false" child-align="MiddleRight">
+            <text id="diff-txt" size-delta-y="5.5" size-delta-x="10" text="Expert+" pref-height="10" color="#FFFFFFBF" font-size="4" italics="true"/>
+            <img id="diff-img" size-delta-x="3.5" size-delta-y="3.5" src="BetterPause.UI.Resources.dot.png" image-color="#FFFFFFBF"/>
+          </horizontal>
+        </horizontal>
+      </horizontal>
+      <horizontal spacing="1" >
+        <button id="menu-btn" text="Menu" pref-width="40" pref-height="10"/>
+        <button id="restart-btn" text="Restart" pref-width="40" pref-height="10"/>
+        <button id="continue-btn" text="Continue" pref-width="40" pref-height="10"/>
+      </horizontal>
+    </vertical>
+  </vertical>
+</bg>
