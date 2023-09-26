@@ -15,7 +15,7 @@ using Zenject;
 namespace BetterPause.UI
 {
 	[HotReload(RelativePathToLayout = @"BetterPauseView.bsml")]
-	[ViewDefinition("BetterPause.UI.BetterPauseView.bsml")]
+	[ViewDefinition("BetterPause.UI.BetterPauseView")]
 	internal class BetterPauseView : BSMLAutomaticViewController
 	{
 		private static PluginConfig config => PluginConfig.Instance;
