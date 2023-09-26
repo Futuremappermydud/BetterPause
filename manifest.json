@@ -2,11 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
   "id": "BetterPause",
   "name": "BetterPause",
-  "author": "",
-  "version": "0.0.1",
-  "description": "",
-  "gameVersion": "1.18.3",
+  "author": "FutureMapper",
+  "version": "1.0.0",
+  "description": "Allows you to fix the uncustomizable and ugly pause menu and replace it with a better one (with too many options).",
+  "gameVersion": "1.29.1",
   "dependsOn": {
-    "BSIPA": "^4.2.0"
+    "BSIPA": "^4.2.0",
+    "BeatSaberMarkupLanguage": "^1.6.0",
+    "SiraUtil": "^3.1.0"
   }
 }

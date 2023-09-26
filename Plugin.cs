@@ -7,7 +7,7 @@ using IPALogger = IPA.Logging.Logger;
 
 namespace BetterPause
 {
-	[Plugin(RuntimeOptions.SingleStartInit)]
+	[Plugin(RuntimeOptions.SingleStartInit), NoEnableDisable]
 	public class Plugin
 	{
 		internal static Plugin Instance { get; private set; }
@@ -21,20 +21,6 @@ namespace BetterPause
 			zenjector.Install<BetterPauseMenuInstaller>(Location.Menu);
 			zenjector.Install<BetterPauseGameInstaller>(Location.StandardPlayer);
 			PluginConfig.Instance = conf.Generated<PluginConfig>();
-
 		}
-
-		[OnStart]
-		public void OnApplicationStart()
-		{
-			Plugin.Log.Info("OnApplicationStart");
-		}
-
-		[OnExit]
-		public void OnApplicationQuit()
-		{
-
-		}
-
 	}
 }

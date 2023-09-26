@@ -1,6 +1,5 @@
 ﻿using HMUI;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace BetterPause.UI
 {

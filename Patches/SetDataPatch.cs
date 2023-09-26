@@ -1,16 +1,10 @@
 ﻿using BetterPause.Providers;
 using BetterPause.UI;
 using HMUI;
-using IPA.Utilities;
 using SiraUtil.Affinity;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
-using static PlayerSaveData;
 
 namespace BetterPause.Patches
 {
@@ -38,7 +32,7 @@ namespace BetterPause.Patches
 			var con = buttons.Find("ContinueButton").gameObject;
 
 			var IForgor = buttons.parent.parent.Find("IFUIContainer");
-			if(IForgor != null)
+			if (IForgor != null)
 			{
 				IForgor = IForgor.Find("IFUIBackground");
 			}

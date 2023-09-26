@@ -1,9 +1,4 @@
 ﻿using BetterPause.UI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace BetterPause.Providers
@@ -53,7 +48,7 @@ namespace BetterPause.Providers
 
 		public (Color, Color) GetDiffColor()
 		{
-			var color = config.EnableDiffColor ? config.DiffColor: Color.white.ColorWithAlpha(0.75f);
+			var color = config.EnableDiffColor ? config.DiffColor : Color.white.ColorWithAlpha(0.75f);
 			return (color, color);
 		}
 
