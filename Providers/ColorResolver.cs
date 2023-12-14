@@ -75,7 +75,6 @@ namespace BetterPause.Providers
 
 		private void UpdateButton(ImageContentBehaviour content, Color def, Color hov)
 		{
-			content.enabled = config.EnableCustomButtonColors;
 			content.Default = def;
 			content.Hover = hov;
 		}

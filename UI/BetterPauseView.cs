@@ -336,8 +336,10 @@ namespace BetterPause.UI
 
 		[UIObject("menu-btn")] private GameObject _menuButton;
 		private ImageContentBehaviour _menuContent;
+
 		[UIObject("restart-btn")] private GameObject _restartButton;
 		private ImageContentBehaviour _restartContent;
+
 		[UIObject("continue-btn")] private GameObject _continueButton;
 		private ImageContentBehaviour _continueContent;
 

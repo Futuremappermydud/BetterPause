@@ -55,8 +55,11 @@ namespace BetterPause.Patches
 			rect.anchorMin = new Vector2(0.01f, rect.anchorMin.y);
 
 			var menuContent = menuButton.gameObject.AddComponent<ImageContentBehaviour>();
+			menuContent.InGame = true;
 			var restartContent = restartButton.gameObject.AddComponent<ImageContentBehaviour>();
+			restartContent.InGame = true;
 			var continueContent = continueButton.gameObject.AddComponent<ImageContentBehaviour>();
+			continueContent.InGame = true;
 
 			(bgImage.color0, bgImage.color1) = _colorResolver.GetBackgroundGradient(true);
 			bgImage._gradientDirection = PluginConfig.Instance.BackgroundGradientDirection;
@@ -74,9 +77,10 @@ namespace BetterPause.Patches
 
 			if (IForgorBg != null)
 			{
-				IForgorBg.gradient = true;
-				IForgorBg.color = Color.white.ColorWithAlpha(0.8f);
-				IForgorBg.gameObject.SetActive(PluginConfig.Instance.EnableIForgorIntegration && _colorResolver.IForgorInstalled);
+				bool enableThingy = PluginConfig.Instance.EnableIForgorIntegration && _colorResolver.IForgorInstalled;
+				IForgorBg.gradient = enableThingy;
+				IForgorBg.color = enableThingy ? Color.white.ColorWithAlpha(0.8f) : Color.black.ColorWithAlpha(0.8f);
+				//IForgorBg.gameObject.SetActive(PluginConfig.Instance.EnableIForgorIntegration && _colorResolver.IForgorInstalled);
 				IForgorBg._gradientDirection = PluginConfig.Instance.IForgorGradientDirection;
 				(IForgorBg.color0, IForgorBg._color1) = _colorResolver.GetIForgorGradient();
 			}

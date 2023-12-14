@@ -3,7 +3,7 @@
   "id": "BetterPause",
   "name": "BetterPause",
   "author": "FutureMapper",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Allows you to fix the uncustomizable and ugly pause menu and replace it with a better one (with too many options).",
   "gameVersion": "1.29.1",
   "dependsOn": {
