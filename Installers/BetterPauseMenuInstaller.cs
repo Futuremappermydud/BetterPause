@@ -10,7 +10,7 @@ namespace BetterPause.Installers
 		{
 			Container.Bind<ColorResolver>().AsSingle().NonLazy();
 			Container.Bind<BetterPauseView>().FromNewComponentAsViewController().AsSingle().NonLazy();
-			Container.Bind<BetterPauseFlowCoordinator>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
+			Container.BindInterfacesAndSelfTo<BetterPauseFlowCoordinator>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
 		}
 	}
 }

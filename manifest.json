@@ -3,9 +3,9 @@
   "id": "BetterPause",
   "name": "BetterPause",
   "author": "FutureMapper",
-  "version": "1.0.3",
+  "version": "1.1.2",
   "description": "Allows you to fix the uncustomizable and ugly pause menu and replace it with a better one (with too many options).",
-  "gameVersion": "1.29.1",
+  "gameVersion": "1.37.5",
   "dependsOn": {
     "BSIPA": "^4.2.0",
     "BeatSaberMarkupLanguage": "^1.6.0",

@@ -19,7 +19,7 @@ namespace BetterPause.UI
 
 		private void OnEnable()
 		{
-			if (!InGame) return;
+			if (!InGame || !_button) return;
 			var pos = _button.transform.localPosition;
 			pos.y = yVals.Item2;
 			_button.transform.localPosition = pos;
@@ -28,7 +28,7 @@ namespace BetterPause.UI
 		private void Update()
 		{
 			_image.color = _button.selectionState == NoTransitionsButton.SelectionState.Highlighted ? Hover : Default;
-			if (!InGame) return;
+			if (!InGame || !_button) return;
 			var pos = _button.transform.localPosition;
 			pos.y = Mathf.Lerp(pos.y, _button.selectionState == NoTransitionsButton.SelectionState.Highlighted ? yVals.Item1 : yVals.Item2, Time.deltaTime * 6f);
 			_button.transform.localPosition = pos;
